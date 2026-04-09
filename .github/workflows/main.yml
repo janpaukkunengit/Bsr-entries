@@ -24,11 +24,12 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
+- name: Install dependencies
+  run: |
+    python -m pip install --upgrade pip
+    pip install requests beautifulsoup4
+    
+    
       - name: Run checker
         env:
           ENTRY_URL: "https://sailracehq.com/entered/?raceguid=93329408-1cc5-496c-9ed8-ebfb9c59f892"
